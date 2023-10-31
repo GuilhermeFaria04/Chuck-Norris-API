@@ -44,22 +44,22 @@ function App() {
 };
 
 
-  return (
-    <main>
-      <img src={chuck} alt="Chuck imagem vetor" />
-      <h1>Chuck Norris Jokes</h1>
-      <p>{joke}</p>
-      <button onClick={apiCall}>Nova Piada</button>
-      <button onClick={favorite}>Favoritos</button>
-      <h1>Favoritos</h1>
-      {jokes.map((item, index) => (
-      <div>
-        <p key= {index}>{item}</p>
-        <button onClick={() => removefav(index)}>Remover</button> 
-      </div>
-      ) )}
-    </main>
-  );
+return (
+  <main>
+    <img src={chuck} alt="Chuck imagem vetor" />
+    <h1>Chuck Norris Jokes</h1>
+    <p>{joke}</p>
+    <button onClick={apiCall}>Nova Piada</button>
+    <button onClick={favorite}>Favoritos</button>
+    <h1>Favoritos</h1>
+    {jokes.map((item, index) => (
+    <div>
+      <p key= {index}>{item}</p>
+      <button onClick={() => removefav(index)}>Remover</button> 
+    </div>
+    ) )}
+  </main>
+);
 }
 
 export default App;
